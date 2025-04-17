@@ -107,6 +107,7 @@ impl PmuConfig {
                 0x2A | 0x2D | 0x3E => (0x5101c4, 100),        // Intel Sandy Bridge
                 0x3A => (0x5101c4, 100),                      // Intel Ivy Bridge
                 0x3C | 0x3F | 0x45 | 0x46 => (0x5101c4, 100), // Intel Haswell
+                0x0C => (0x5101c4, 100), // QEMU Intel Haswell
                 0x3D | 0x47 | 0x4F | 0x56 => (0x5101c4, 100), // Intel Broadwell
                 0x4E | 0x55 | 0x5E => (0x5101c4, 100),        // Intel Skylake
                 0x8E | 0x9E => (0x5101c4, 100),               // Intel Kabylake
