@@ -230,7 +230,10 @@ impl Timer {
         // meaningfully handle the error anyway.
         Self {
             inner: if is_perf_supported() {
-                Some(TimerImpl::new(guest_pid, guest_tid).unwrap())
+                match TimerImpl::new(guest_pid, guest_tid) {
+                    Ok(timer) => Some(timer),
+                    Err(_) => None,
+                }
             } else {
                 None
             },
