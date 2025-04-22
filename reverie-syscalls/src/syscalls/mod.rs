@@ -114,8 +114,8 @@ syscall_list! {
         dup => Dup,
         #[cfg(not(target_arch = "aarch64"))]
         dup2 => Dup2,
-        // #[cfg(not(target_arch = "aarch64"))]
-        // pause => Pause,
+        #[cfg(not(target_arch = "aarch64"))]
+        pause => Pause,
         nanosleep => Nanosleep,
         getitimer => Getitimer,
         #[cfg(not(target_arch = "aarch64"))]
